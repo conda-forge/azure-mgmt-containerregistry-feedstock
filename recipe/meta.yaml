@@ -1,17 +1,17 @@
 {% set name = "azure-mgmt-containerregistry" %}
-{% set version = "10.3.0" %}
+{% set version = "11.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ae21651855dfb19c42d91d6b3a965c6c611e23f8bc4bf7138835e652d2f918e3
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: a76e3a06791cd4138acf064bb25f6ed266ce4a370e1cc113eb8d488d34b7ba77
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
