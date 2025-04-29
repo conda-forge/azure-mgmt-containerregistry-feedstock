@@ -1,5 +1,5 @@
 {% set name = "azure-mgmt-containerregistry" %}
-{% set version = "13.0.0" %}
+{% set version = "14.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: af723f37a536919bd67b6772024c469cc2a017be7f31949bf41caae16f0e8dce
+  sha256: 7383f1c5547bcffe76e411edd8250d55c34cddf5ef6804d5875c163cca66c4b5
 
 build:
   noarch: python
